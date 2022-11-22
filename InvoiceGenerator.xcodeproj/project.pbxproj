@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7973EB7D04370BCD26D78D3A /* Pods_InvoiceGenerator_InvoiceGeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0729D00AD36D5ECB99EDAE4 /* Pods_InvoiceGenerator_InvoiceGeneratorUITests.framework */; };
 		9DF46A1627AE86CD98551072 /* Pods_InvoiceGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC37071B0090770BC2FECA9 /* Pods_InvoiceGenerator.framework */; };
+		D4C5603C292D91920064064A /* InvoiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5603B292D91920064064A /* InvoiceItem.swift */; };
 		D4DB4E3C292D598400AE2DC5 /* InvoiceGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4E3B292D598400AE2DC5 /* InvoiceGeneratorApp.swift */; };
 		D4DB4E3E292D598400AE2DC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4E3D292D598400AE2DC5 /* ContentView.swift */; };
 		D4DB4E40292D598600AE2DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DB4E3F292D598600AE2DC5 /* Assets.xcassets */; };
@@ -40,12 +41,13 @@
 /* Begin PBXFileReference section */
 		09433C90B9E971F3C90CE883 /* Pods-InvoiceGenerator-InvoiceGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvoiceGenerator-InvoiceGeneratorTests.debug.xcconfig"; path = "Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorTests/Pods-InvoiceGenerator-InvoiceGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		20567443F18ED4F7444DC2BF /* Pods_InvoiceGenerator_InvoiceGeneratorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InvoiceGenerator_InvoiceGeneratorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		239C157E7CF004AC85526356 /* InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift"; path = "MockingbirdMocks/InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift"; sourceTree = "<group>"; };
+		239C157E7CF004AC85526356 /* InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift"; path = "MockingbirdMocks/InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift"; sourceTree = "<group>"; };
 		4B2DC9C0FD2D9E462CC4DB70 /* Pods-InvoiceGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvoiceGenerator.debug.xcconfig"; path = "Target Support Files/Pods-InvoiceGenerator/Pods-InvoiceGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		9BC37071B0090770BC2FECA9 /* Pods_InvoiceGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InvoiceGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30E2670474347BC3E2CCC77 /* Pods-InvoiceGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvoiceGenerator.release.xcconfig"; path = "Target Support Files/Pods-InvoiceGenerator/Pods-InvoiceGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		BDC4E839D212FCF47A99B6B2 /* Pods-InvoiceGenerator-InvoiceGeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvoiceGenerator-InvoiceGeneratorUITests.debug.xcconfig"; path = "Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorUITests/Pods-InvoiceGenerator-InvoiceGeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0729D00AD36D5ECB99EDAE4 /* Pods_InvoiceGenerator_InvoiceGeneratorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InvoiceGenerator_InvoiceGeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C5603B292D91920064064A /* InvoiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceItem.swift; sourceTree = "<group>"; };
 		D4DB4E38292D598400AE2DC5 /* InvoiceGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvoiceGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DB4E3B292D598400AE2DC5 /* InvoiceGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceGeneratorApp.swift; sourceTree = "<group>"; };
 		D4DB4E3D292D598400AE2DC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,7 +109,6 @@
 				BDC4E839D212FCF47A99B6B2 /* Pods-InvoiceGenerator-InvoiceGeneratorUITests.debug.xcconfig */,
 				E19071A8EB3C530280C63027 /* Pods-InvoiceGenerator-InvoiceGeneratorUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -119,6 +120,14 @@
 				D0729D00AD36D5ECB99EDAE4 /* Pods_InvoiceGenerator_InvoiceGeneratorUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4C5603A292D91820064064A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4C5603B292D91920064064A /* InvoiceItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D4DB4E2F292D598400AE2DC5 = {
@@ -147,6 +156,7 @@
 		D4DB4E3A292D598400AE2DC5 /* InvoiceGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				D4C5603A292D91820064064A /* Models */,
 				D4DB4E3B292D598400AE2DC5 /* InvoiceGeneratorApp.swift */,
 				D4DB4E3D292D598400AE2DC5 /* ContentView.swift */,
 				D4DB4E3F292D598600AE2DC5 /* Assets.xcassets */,
@@ -423,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4DB4E3E292D598400AE2DC5 /* ContentView.swift in Sources */,
+				D4C5603C292D91920064064A /* InvoiceItem.swift in Sources */,
 				D4DB4E3C292D598400AE2DC5 /* InvoiceGeneratorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
