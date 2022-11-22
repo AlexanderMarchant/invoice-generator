@@ -17,6 +17,7 @@
 		D4DB4E58292D598700AE2DC5 /* InvoiceGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4E57292D598700AE2DC5 /* InvoiceGeneratorUITests.swift */; };
 		D4DB4E5A292D598700AE2DC5 /* InvoiceGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4E59292D598700AE2DC5 /* InvoiceGeneratorUITestsLaunchTests.swift */; };
 		D9E0D8E03A23FD7B4BCC225C /* Pods_InvoiceGenerator_InvoiceGeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20567443F18ED4F7444DC2BF /* Pods_InvoiceGenerator_InvoiceGeneratorTests.framework */; };
+		EC42F6127B4FDEDB141F2AAF /* InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239C157E7CF004AC85526356 /* InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		09433C90B9E971F3C90CE883 /* Pods-InvoiceGenerator-InvoiceGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvoiceGenerator-InvoiceGeneratorTests.debug.xcconfig"; path = "Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorTests/Pods-InvoiceGenerator-InvoiceGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		20567443F18ED4F7444DC2BF /* Pods_InvoiceGenerator_InvoiceGeneratorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InvoiceGenerator_InvoiceGeneratorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		239C157E7CF004AC85526356 /* InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift"; path = "MockingbirdMocks/InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift"; sourceTree = "<group>"; };
 		4B2DC9C0FD2D9E462CC4DB70 /* Pods-InvoiceGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvoiceGenerator.debug.xcconfig"; path = "Target Support Files/Pods-InvoiceGenerator/Pods-InvoiceGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		9BC37071B0090770BC2FECA9 /* Pods_InvoiceGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InvoiceGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30E2670474347BC3E2CCC77 /* Pods-InvoiceGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvoiceGenerator.release.xcconfig"; path = "Target Support Files/Pods-InvoiceGenerator/Pods-InvoiceGenerator.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BFCB2825CE2BB9A0CA9EAD9 /* Generated Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				239C157E7CF004AC85526356 /* InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift */,
+			);
+			name = "Generated Mocks";
+			sourceTree = "<group>";
+		};
 		984F1DB1E2ABF73F13D6AD0C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 				D4DB4E39292D598400AE2DC5 /* Products */,
 				984F1DB1E2ABF73F13D6AD0C /* Pods */,
 				C817952217D5053C0A7898D8 /* Frameworks */,
+				4BFCB2825CE2BB9A0CA9EAD9 /* Generated Mocks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,6 +207,7 @@
 			buildConfigurationList = D4DB4E60292D598700AE2DC5 /* Build configuration list for PBXNativeTarget "InvoiceGeneratorTests" */;
 			buildPhases = (
 				D2EDBC053350E8D3EA4E619E /* [CP] Check Pods Manifest.lock */,
+				CD9736A842E5B507A5CB260F /* Generate Mockingbird Mocks */,
 				D4DB4E45292D598700AE2DC5 /* Sources */,
 				D4DB4E46292D598700AE2DC5 /* Frameworks */,
 				D4DB4E47292D598700AE2DC5 /* Resources */,
@@ -322,6 +334,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CD9736A842E5B507A5CB260F /* Generate Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Mockingbird Mocks";
+			outputPaths = (
+				"$(SRCROOT)/MockingbirdMocks/InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\n\n# Prevent Xcode 13 from running this script while indexing.\n[[ \"${ACTION}\" == \"indexbuild\" ]] && exit 0\n\n\"${SRCROOT}/Pods/MockingbirdFramework/mockingbird\" generate --targets \"InvoiceGenerator\" --outputs \"${SRCROOT}/MockingbirdMocks/InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift\"";
+		};
 		D2EDBC053350E8D3EA4E619E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,9 +380,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorTests/Pods-InvoiceGenerator-InvoiceGeneratorTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorTests/Pods-InvoiceGenerator-InvoiceGeneratorTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -400,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4DB4E4E292D598700AE2DC5 /* InvoiceGeneratorTests.swift in Sources */,
+				EC42F6127B4FDEDB141F2AAF /* InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
