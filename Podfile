@@ -8,8 +8,8 @@ target 'InvoiceGenerator' do
   # Pods for InvoiceGenerator
 
   target 'InvoiceGeneratorTests' do
-    inherit! :search_paths
-    # Pods for testing
+    use_frameworks!
+    pod 'MockingbirdFramework', '~> 0.20'
   end
 
   target 'InvoiceGeneratorUITests' do
