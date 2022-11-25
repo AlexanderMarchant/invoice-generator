@@ -12,24 +12,48 @@ struct AddInvoiceItemView: View {
     @StateObject var viewModel: ViewModel
     
     var body: some View {
-        VStack(spacing: 25) {
+        VStack(spacing: 15) {
             
             Text("Add Invoice Item")
                 .font(.largeTitle)
             
-            TextField("Quantity", text: self.$viewModel.quantity)
-                .padding(.horizontal)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+            VStack(alignment: .leading, spacing: 5) {
+                TextField("Quantity", text: self.$viewModel.quantity)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                if !self.viewModel.quantityPrompt.isEmpty {
+                    Text(self.viewModel.quantityPrompt)
+                        .font(.caption)
+                }
+                
+            }
+            .padding(.horizontal)
             
-            TextField("Name", text: self.$viewModel.name)
-                .padding(.horizontal)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+            VStack(alignment: .leading, spacing: 5) {
+                TextField("Name", text: self.$viewModel.name)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                if !self.viewModel.namePrompt.isEmpty {
+                    Text(self.viewModel.namePrompt)
+                        .font(.caption)
+                }
+                
+            }
+            .padding(.horizontal)
+            
+            VStack(alignment: .leading, spacing: 5) {
+                TextField("Price", text: self.$viewModel.price)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                if !self.viewModel.pricePrompt.isEmpty {
+                    Text(self.viewModel.pricePrompt)
+                        .font(.caption)
+                }
+                
+            }
+            .padding(.horizontal)
             
             TextField("Description", text: self.$viewModel.description)
-                .padding(.horizontal)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            
-            TextField("Price", text: self.$viewModel.price)
                 .padding(.horizontal)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
