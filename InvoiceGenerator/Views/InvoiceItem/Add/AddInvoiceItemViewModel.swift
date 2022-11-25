@@ -29,28 +29,12 @@ extension AddInvoiceItemView {
         @Published var description: String
         @Published var price: String {
             didSet {
-                var filtered = price.filter { $0.isNumber || $0 == "." }
                 
-                var split = filtered.components(separatedBy: ".")
+                let formattedPrice = price.asDoubleFormat()
                 
-                if split[0] == "." {
+                if price != formattedPrice {
                     DispatchQueue.main.async {
-                        self.price = ""
-                    }
-                }
-                
-                if split.count >= 2
-                {
-                    var digits = split[1]
-                    if digits.count > 2 {
-                        digits = "\(digits[0])\(digits[1])"
-                    }
-                    filtered = "\(split[0]).\(digits)"
-                }
-                
-                if price != filtered {
-                    DispatchQueue.main.async {
-                        self.price = filtered
+                        self.price = formattedPrice
                     }
                 }
             }

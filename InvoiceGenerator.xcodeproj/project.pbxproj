@@ -13,6 +13,9 @@
 		D4C56043292D92C70064064A /* AddInvoiceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C56042292D92C70064064A /* AddInvoiceItemView.swift */; };
 		D4C56045292D93470064064A /* AddInvoiceItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C56044292D93470064064A /* AddInvoiceItemViewModel.swift */; };
 		D4C56049292DA31B0064064A /* StringProtocol+SubScriptOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C56048292DA31B0064064A /* StringProtocol+SubScriptOffset.swift */; };
+		D4C70EDE2931319000B48DC7 /* AddItemInvoiceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C70EDD2931319000B48DC7 /* AddItemInvoiceViewModelTests.swift */; };
+		D4C70EE32931376F00B48DC7 /* String+AsDoubleFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C70EE22931376F00B48DC7 /* String+AsDoubleFormat.swift */; };
+		D4C70EE72931386600B48DC7 /* String+AsDoubleFormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C70EE62931386600B48DC7 /* String+AsDoubleFormatTests.swift */; };
 		D4DB4E3C292D598400AE2DC5 /* InvoiceGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4E3B292D598400AE2DC5 /* InvoiceGeneratorApp.swift */; };
 		D4DB4E3E292D598400AE2DC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4E3D292D598400AE2DC5 /* ContentView.swift */; };
 		D4DB4E40292D598600AE2DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DB4E3F292D598600AE2DC5 /* Assets.xcassets */; };
@@ -54,6 +57,9 @@
 		D4C56042292D92C70064064A /* AddInvoiceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInvoiceItemView.swift; sourceTree = "<group>"; };
 		D4C56044292D93470064064A /* AddInvoiceItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInvoiceItemViewModel.swift; sourceTree = "<group>"; };
 		D4C56048292DA31B0064064A /* StringProtocol+SubScriptOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+SubScriptOffset.swift"; sourceTree = "<group>"; };
+		D4C70EDD2931319000B48DC7 /* AddItemInvoiceViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemInvoiceViewModelTests.swift; sourceTree = "<group>"; };
+		D4C70EE22931376F00B48DC7 /* String+AsDoubleFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AsDoubleFormat.swift"; sourceTree = "<group>"; };
+		D4C70EE62931386600B48DC7 /* String+AsDoubleFormatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AsDoubleFormatTests.swift"; sourceTree = "<group>"; };
 		D4DB4E38292D598400AE2DC5 /* InvoiceGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvoiceGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DB4E3B292D598400AE2DC5 /* InvoiceGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceGeneratorApp.swift; sourceTree = "<group>"; };
 		D4DB4E3D292D598400AE2DC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 		D4C56046292DA2F50064064A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D4C70EDF293134BB00B48DC7 /* DispatchQueue */,
 				D4C56047292DA2FC0064064A /* String */,
 			);
 			path = Extensions;
@@ -173,6 +180,54 @@
 			isa = PBXGroup;
 			children = (
 				D4C56048292DA31B0064064A /* StringProtocol+SubScriptOffset.swift */,
+				D4C70EE22931376F00B48DC7 /* String+AsDoubleFormat.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		D4C70EDA293130E200B48DC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4C70EDB293130E800B48DC7 /* InvoiceItem */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4C70EDB293130E800B48DC7 /* InvoiceItem */ = {
+			isa = PBXGroup;
+			children = (
+				D4C70EDC293130EE00B48DC7 /* Add */,
+			);
+			path = InvoiceItem;
+			sourceTree = "<group>";
+		};
+		D4C70EDC293130EE00B48DC7 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				D4C70EDD2931319000B48DC7 /* AddItemInvoiceViewModelTests.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		D4C70EDF293134BB00B48DC7 /* DispatchQueue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DispatchQueue;
+			sourceTree = "<group>";
+		};
+		D4C70EE42931384700B48DC7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4C70EE52931384F00B48DC7 /* String */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4C70EE52931384F00B48DC7 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				D4C70EE62931386600B48DC7 /* String+AsDoubleFormatTests.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -226,6 +281,8 @@
 		D4DB4E4C292D598700AE2DC5 /* InvoiceGeneratorTests */ = {
 			isa = PBXGroup;
 			children = (
+				D4C70EE42931384700B48DC7 /* Extensions */,
+				D4C70EDA293130E200B48DC7 /* Views */,
 				D4DB4E4D292D598700AE2DC5 /* InvoiceGeneratorTests.swift */,
 			);
 			path = InvoiceGeneratorTests;
@@ -482,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4DB4E3E292D598400AE2DC5 /* ContentView.swift in Sources */,
+				D4C70EE32931376F00B48DC7 /* String+AsDoubleFormat.swift in Sources */,
 				D4C56045292D93470064064A /* AddInvoiceItemViewModel.swift in Sources */,
 				D4C5603C292D91920064064A /* InvoiceItem.swift in Sources */,
 				D4C56049292DA31B0064064A /* StringProtocol+SubScriptOffset.swift in Sources */,
@@ -494,6 +552,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C70EDE2931319000B48DC7 /* AddItemInvoiceViewModelTests.swift in Sources */,
+				D4C70EE72931386600B48DC7 /* String+AsDoubleFormatTests.swift in Sources */,
 				D4DB4E4E292D598700AE2DC5 /* InvoiceGeneratorTests.swift in Sources */,
 				EC42F6127B4FDEDB141F2AAF /* InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift in Sources */,
 			);
