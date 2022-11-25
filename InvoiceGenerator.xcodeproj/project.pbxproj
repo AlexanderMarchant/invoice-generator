@@ -308,6 +308,7 @@
 				D4DB4E34292D598400AE2DC5 /* Sources */,
 				D4DB4E35292D598400AE2DC5 /* Frameworks */,
 				D4DB4E36292D598400AE2DC5 /* Resources */,
+				9C92B91BEB7218597B3E5694 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,6 +348,7 @@
 				D4DB4E4F292D598700AE2DC5 /* Sources */,
 				D4DB4E50292D598700AE2DC5 /* Frameworks */,
 				D4DB4E51292D598700AE2DC5 /* Resources */,
+				64935570CEDE8FF51872B5C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -450,6 +452,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		64935570CEDE8FF51872B5C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorUITests/Pods-InvoiceGenerator-InvoiceGeneratorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorUITests/Pods-InvoiceGenerator-InvoiceGeneratorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorUITests/Pods-InvoiceGenerator-InvoiceGeneratorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C92B91BEB7218597B3E5694 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InvoiceGenerator/Pods-InvoiceGenerator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InvoiceGenerator/Pods-InvoiceGenerator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InvoiceGenerator/Pods-InvoiceGenerator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CD9736A842E5B507A5CB260F /* Generate Mockingbird Mocks */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -496,13 +532,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorTests/Pods-InvoiceGenerator-InvoiceGeneratorTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorTests/Pods-InvoiceGenerator-InvoiceGeneratorTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

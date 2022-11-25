@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorTests/Pods-InvoiceGenerator-InvoiceGeneratorTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AlertToast/AlertToast.framework
 ${BUILT_PRODUCTS_DIR}/MockingbirdFramework/Mockingbird.framework
