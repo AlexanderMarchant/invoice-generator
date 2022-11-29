@@ -48,5 +48,6 @@ Package.pins
 #
 *.generated.swift
 **/*.xcodeproj/MockingbirdCache/
+**/*.xcodeproj/xcuserdata/
 .mockingbird/
 lib_InternalSwiftSyntaxParser.dylib
