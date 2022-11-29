@@ -7,7 +7,9 @@
 
 import Foundation
 
-class InvoiceItem: ObservableObject {
+class InvoiceItem: ObservableObject, Identifiable {
+    
+    let id: String
     
     @Published var quantity: Int
     @Published var name: String
@@ -24,6 +26,9 @@ class InvoiceItem: ObservableObject {
         price: Double,
         description: String? = nil
     ) {
+        
+        self.id = UUID().uuidString
+        
         self.quantity = quantity
         self.name = name
         self.price = price
