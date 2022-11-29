@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct AddInvoiceItemView: View {
     
@@ -58,13 +59,25 @@ struct AddInvoiceItemView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             Button(action: {
+                DispatchQueue.main.async {
+                    NSApp.keyWindow?.makeFirstResponder(nil)
+                }
                 self.viewModel.createItem()
             }) {
                 Text("Save")
             }
+            .background(Color.buttonBlue)
             
         }
         .padding()
+        .toast(isPresenting: self.$viewModel.showSuccessAlert) {
+            AlertToast(
+                displayMode: .banner(.pop),
+                type: .complete(.white),
+                title: "Created",
+                style: .success
+            )
+        }
     }
 }
 
