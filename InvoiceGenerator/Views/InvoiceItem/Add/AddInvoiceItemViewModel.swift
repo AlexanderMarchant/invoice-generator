@@ -40,7 +40,7 @@ extension AddInvoiceItemView {
             }
         }
         
-        @Published var itemCreated: Bool = false
+        @Published var showSuccessAlert: Bool = false
         
         var quantityPrompt: String {
             if isValidQuantity() {
@@ -86,6 +86,8 @@ extension AddInvoiceItemView {
             }
             
             self.item = InvoiceItem(quantity: quantity, name: self.name, price: price, description: self.description)
+            
+            self.showSuccessAlert = true
         }
         
         private func isValidQuantity() -> Bool {
