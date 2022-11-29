@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7973EB7D04370BCD26D78D3A /* Pods_InvoiceGenerator_InvoiceGeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0729D00AD36D5ECB99EDAE4 /* Pods_InvoiceGenerator_InvoiceGeneratorUITests.framework */; };
 		9DF46A1627AE86CD98551072 /* Pods_InvoiceGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC37071B0090770BC2FECA9 /* Pods_InvoiceGenerator.framework */; };
+		D477926B29368CE00080A9DD /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D477926A29368CE00080A9DD /* Colours.xcassets */; };
+		D477926E29368E150080A9DD /* Color+Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477926D29368E150080A9DD /* Color+Colours.swift */; };
+		D4779271293695EC0080A9DD /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4779270293695EC0080A9DD /* Styles.swift */; };
 		D4C5603C292D91920064064A /* InvoiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5603B292D91920064064A /* InvoiceItem.swift */; };
 		D4C56043292D92C70064064A /* AddInvoiceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C56042292D92C70064064A /* AddInvoiceItemView.swift */; };
 		D4C56045292D93470064064A /* AddInvoiceItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C56044292D93470064064A /* AddInvoiceItemViewModel.swift */; };
@@ -53,6 +56,9 @@
 		B30E2670474347BC3E2CCC77 /* Pods-InvoiceGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvoiceGenerator.release.xcconfig"; path = "Target Support Files/Pods-InvoiceGenerator/Pods-InvoiceGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		BDC4E839D212FCF47A99B6B2 /* Pods-InvoiceGenerator-InvoiceGeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvoiceGenerator-InvoiceGeneratorUITests.debug.xcconfig"; path = "Target Support Files/Pods-InvoiceGenerator-InvoiceGeneratorUITests/Pods-InvoiceGenerator-InvoiceGeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0729D00AD36D5ECB99EDAE4 /* Pods_InvoiceGenerator_InvoiceGeneratorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InvoiceGenerator_InvoiceGeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D477926A29368CE00080A9DD /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
+		D477926D29368E150080A9DD /* Color+Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Colours.swift"; sourceTree = "<group>"; };
+		D4779270293695EC0080A9DD /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		D4C5603B292D91920064064A /* InvoiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceItem.swift; sourceTree = "<group>"; };
 		D4C56042292D92C70064064A /* AddInvoiceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInvoiceItemView.swift; sourceTree = "<group>"; };
 		D4C56044292D93470064064A /* AddInvoiceItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInvoiceItemViewModel.swift; sourceTree = "<group>"; };
@@ -134,6 +140,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D477926929368CC90080A9DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D477926A29368CE00080A9DD /* Colours.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D477926C29368DE00080A9DD /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				D477926D29368E150080A9DD /* Color+Colours.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		D477926F293695D60080A9DD /* AlertStyle */ = {
+			isa = PBXGroup;
+			children = (
+				D4779270293695EC0080A9DD /* Styles.swift */,
+			);
+			path = AlertStyle;
+			sourceTree = "<group>";
+		};
 		D4C5603A292D91820064064A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +200,8 @@
 		D4C56046292DA2F50064064A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D477926F293695D60080A9DD /* AlertStyle */,
+				D477926C29368DE00080A9DD /* Color */,
 				D4C70EDF293134BB00B48DC7 /* DispatchQueue */,
 				D4C56047292DA2FC0064064A /* String */,
 			);
@@ -258,6 +290,7 @@
 		D4DB4E3A292D598400AE2DC5 /* InvoiceGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				D477926929368CC90080A9DD /* Resources */,
 				D4C56046292DA2F50064064A /* Extensions */,
 				D4C5603D292D929C0064064A /* Views */,
 				D4C5603A292D91820064064A /* Models */,
@@ -409,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4DB4E43292D598600AE2DC5 /* Preview Assets.xcassets in Resources */,
+				D477926B29368CE00080A9DD /* Colours.xcassets in Resources */,
 				D4DB4E40292D598600AE2DC5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4779271293695EC0080A9DD /* Styles.swift in Sources */,
 				D4DB4E3E292D598400AE2DC5 /* ContentView.swift in Sources */,
 				D4C70EE32931376F00B48DC7 /* String+AsDoubleFormat.swift in Sources */,
 				D4C56045292D93470064064A /* AddInvoiceItemViewModel.swift in Sources */,
@@ -577,6 +612,7 @@
 				D4C56049292DA31B0064064A /* StringProtocol+SubScriptOffset.swift in Sources */,
 				D4DB4E3C292D598400AE2DC5 /* InvoiceGeneratorApp.swift in Sources */,
 				D4C56043292D92C70064064A /* AddInvoiceItemView.swift in Sources */,
+				D477926E29368E150080A9DD /* Color+Colours.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
