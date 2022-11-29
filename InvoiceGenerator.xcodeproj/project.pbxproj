@@ -23,7 +23,6 @@
 		D4DB4E3E292D598400AE2DC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4E3D292D598400AE2DC5 /* ContentView.swift */; };
 		D4DB4E40292D598600AE2DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DB4E3F292D598600AE2DC5 /* Assets.xcassets */; };
 		D4DB4E43292D598600AE2DC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DB4E42292D598600AE2DC5 /* Preview Assets.xcassets */; };
-		D4DB4E4E292D598700AE2DC5 /* InvoiceGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4E4D292D598700AE2DC5 /* InvoiceGeneratorTests.swift */; };
 		D4DB4E58292D598700AE2DC5 /* InvoiceGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4E57292D598700AE2DC5 /* InvoiceGeneratorUITests.swift */; };
 		D4DB4E5A292D598700AE2DC5 /* InvoiceGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB4E59292D598700AE2DC5 /* InvoiceGeneratorUITestsLaunchTests.swift */; };
 		D9E0D8E03A23FD7B4BCC225C /* Pods_InvoiceGenerator_InvoiceGeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20567443F18ED4F7444DC2BF /* Pods_InvoiceGenerator_InvoiceGeneratorTests.framework */; };
@@ -73,7 +72,6 @@
 		D4DB4E42292D598600AE2DC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D4DB4E44292D598600AE2DC5 /* InvoiceGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InvoiceGenerator.entitlements; sourceTree = "<group>"; };
 		D4DB4E49292D598700AE2DC5 /* InvoiceGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvoiceGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4DB4E4D292D598700AE2DC5 /* InvoiceGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceGeneratorTests.swift; sourceTree = "<group>"; };
 		D4DB4E53292D598700AE2DC5 /* InvoiceGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvoiceGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4DB4E57292D598700AE2DC5 /* InvoiceGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceGeneratorUITests.swift; sourceTree = "<group>"; };
 		D4DB4E59292D598700AE2DC5 /* InvoiceGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -316,7 +314,6 @@
 			children = (
 				D4C70EE42931384700B48DC7 /* Extensions */,
 				D4C70EDA293130E200B48DC7 /* Views */,
-				D4DB4E4D292D598700AE2DC5 /* InvoiceGeneratorTests.swift */,
 			);
 			path = InvoiceGeneratorTests;
 			sourceTree = "<group>";
@@ -622,7 +619,6 @@
 			files = (
 				D4C70EDE2931319000B48DC7 /* AddItemInvoiceViewModelTests.swift in Sources */,
 				D4C70EE72931386600B48DC7 /* String+AsDoubleFormatTests.swift in Sources */,
-				D4DB4E4E292D598700AE2DC5 /* InvoiceGeneratorTests.swift in Sources */,
 				EC42F6127B4FDEDB141F2AAF /* InvoiceGeneratorTests-InvoiceGeneratorMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
