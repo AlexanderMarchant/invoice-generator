@@ -27,6 +27,11 @@ class InvoiceItem: ObservableObject {
         self.quantity = quantity
         self.name = name
         self.price = price
-        self.description = description
+        
+        if description == "" {
+            self.description = nil
+        } else {
+            self.description = description
+        }
     }
 }
